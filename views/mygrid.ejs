@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyGrid - Manutenção de Notícias</title>
+</head>
+<body>
+    <h1>Notícias - MMyGrid</h1>
+    <h3>Adicionar Notícias</h3>
+    <form action="" method="POST">
+        <label for="título">Título:</label>
+        <input type="text" name="título" id="título" required><br>
+        <label for="texto">Texto:</label>
+        <textarea name="texto" id="texto" cols="30" rows="10" required></textarea><br>
+        <input type="submit" value="Gravar">
+   </form>
+   <h3>Listar Notícias</h3>
+   <table>
+       <tr>
+        <th>Título</th>
+        <th>Texto</th>
+       </tr>
+       <tr>
+        <% for(var n=0;n<dados.length;n++){ %>
+        <td><%=dados[n].título%></td>
+        <td><%=dados[n].texto%></td>
+       </tr>
+       <% } %>
+    </table>
+</body>
+</html>
